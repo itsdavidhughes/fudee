@@ -271,7 +271,7 @@ div.board-item-content span{
 .sun-dinner{
   background-image: url(../recipes/images/texan-chilli.jpg);
 }
-/*
+
 
 @media (max-width: 1200px) {
   
@@ -279,7 +279,8 @@ div.board-item-content span{
     width: 200%;
     overflow: x;
   }
-  */
+  
+
 @media (max-width: 600px) {
   
   .board-column {
@@ -323,3 +324,12 @@ div.board-item-content span{
     margin: 0 5px;
     padding: 0;
   }
+
+  
+  
+  #gutter{
+    display: none;
+  }
+
+  
+}
