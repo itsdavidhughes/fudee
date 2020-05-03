@@ -1,0 +1,331 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body{
+
+font-family: 'Fira Sans', sans-serif;
+font-weight: 400;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+  
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "breakfast-label" "lunch-label" "dinner-label" "snacks-label";
+  height: 100vh;
+}
+
+.breakfast-label { grid-area: breakfast-label; }
+
+.lunch-label { grid-area: lunch-label; }
+
+.dinner-label { grid-area: dinner-label; }
+
+.snacks-label { grid-area: snacks-label; }
+
+#gutter{
+  width: 5%;
+  float:left;
+  height: 100vh;
+}
+
+.breakfast-label span{
+  margin-top: 70px;
+}
+
+.lunch-label span{
+  margin-top: -5px;
+}
+
+.dinner-label span{
+  margin-top: -30px;
+}
+
+.snacks-label span{
+  margin-top: -44px;
+}
+#gutter span.spacer{
+  height: 50px;
+  display: block;;
+}
+
+#gutter span{
+  display: block;
+  height: 19vh;
+  line-height: 19vh;
+  transform: rotate(-90deg);
+}
+
+div.board-item-content span{
+  font-weight: 400;
+}
+
+#main{
+  width: 95%;
+  height: 100vh;
+  float:left;
+
+}
+
+.board {
+  position: relative;
+ 
+}
+
+.board-column {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /*width: 13%;
+  margin: 0 5px;*/
+  width: calc((100% / 7));
+  background: #f0f0f0;
+  border-radius: 3px;
+  z-index: 1;
+  max-height: inherit;
+}
+.board-column.muuri-item-releasing {
+  z-index: 2;
+}
+.board-column.muuri-item-dragging {
+  z-index: 3;
+  cursor: move;
+}
+.board-column-header {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  text-align: center;
+  color: #333;
+  border-radius: 3px 3px 0 0;
+}
+
+/* This is the secret sauce,
+   always use a wrapper for setting
+   the "overflow: scroll/auto" */
+.board-column-content-wrapper {
+  position: relative;
+ 
+}
+/* Never ever set "overflow: auto/scroll"
+   to the muuri element, stuff will break */
+.board-column-content {
+  position: relative;
+  border: 10px solid transparent;
+  min-height: 150px;
+  max-height: inherit;
+}
+.board-item {
+  position: absolute;
+  width: 100%;
+  margin: 5px 0;
+  height: 19vh;
+  
+}
+
+.snack{
+  height: 6.3vh;
+}
+
+.snack .board-item-content{
+  line-height: 6.3vh;
+}
+
+.board-item.muuri-item-releasing {
+  z-index: 9998;
+}
+.board-item.muuri-item-dragging {
+  z-index: 9999;
+  cursor: move;
+}
+.board-item.muuri-item-hidden {
+  z-index: 0;
+}
+.board-item-content {
+  position: relative;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 17px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
+  height: 100%;
+  margin: 5px 0;
+  text-align: center;
+  line-height: 25vh;
+}
+
+
+.board-item-content.meal{
+  background-size: cover;
+  background-position: center;
+}
+
+.board-item-content span{
+  display: none;
+}
+
+.board-item-content:hover span{
+  display: block;
+}
+
+.mon-breakfast{
+  background-image: url(./recipes/images/raspberry-scones.jpg);
+}
+
+.mon-lunch{
+  background-image: url(./recipes/images/chickpea-burgers.jpg);
+}
+
+.mon-dinner{
+  background-image: url(./recipes/images/squash-risotto.jpg);
+}
+
+.tue-breakfast{
+  background-image: url(./recipes/images/eggs-soldiers.jpg);
+}
+
+.tue-lunch{
+  background-image: url(./recipes/images/tuna-pittas.jpeg);
+}
+
+.tue-dinner{
+  background-image: url(./recipes/images/cauli-kormna.jpg);
+}
+
+
+.wed-breakfast{
+  background-image: url(./recipes/images/overnight-oats.jpg);
+  
+}
+
+.wed-lunch{
+  background-image: url(./recipes/images/chickpea-burgers.jpg);
+
+}
+
+.wed-dinner{
+  background-image: url(./recipes/images/veggie-chilli.jpg);
+}
+
+.thu-breakfast{
+  background-image: url(./recipes/images/soda-bread-eggs.jpg);
+}
+
+.thu-lunch{
+  background-image: url(./recipes/images/veggie-chilli.jpg);
+}
+.thu-dinner{
+  background-image: url(./recipes/images/lasagne.jpg);
+}
+
+
+.fri-breakfast{
+  background-image: url(./recipes/images/eggs-toast.jpg);
+}
+
+.fri-lunch{
+  background-image: url(./recipes/images/lasagne.jpg);
+
+}
+
+.fri-dinner{
+  background-image: url(./recipes/images/pizza.jpeg);
+
+}
+
+.sat-breakfast{
+  background-image: url(./recipes/images/potato-bread.jpg);
+
+}
+
+.sat-lunch{
+  background-image: url(./recipes/images/chicken-pittas.jpg);
+
+}
+
+.sat-dinner{
+  background-image: url(./recipes/images/spicy-black-bean-tacos.jpg);
+
+}
+
+.sun-breakfast{
+  background-image: url(./recipes/images/waffles.jpg);
+
+}
+
+.sun-lunch{
+  background-image: url(./recipes/images/lasagne.jpg);
+  
+}
+
+.sun-dinner{
+  background-image: url(./recipes/images/texan-chilli.jpg);
+}
+/*
+
+@media (max-width: 1200px) {
+  
+  #main{
+    width: 200%;
+    overflow: x;
+  }
+  */
+@media (max-width: 600px) {
+  
+  .board-column {
+    width: calc((100% / 2.5));
+  }
+  .board-item-content {
+    text-align: center;
+  }
+  .board-item-content span {
+    display: none;
+  }
+  
+  .board-item {
+    
+    height: 10vh;
+  
+    
+  }
+  
+  .board-item-content{
+      line-height: 10vh;
+  }
+  
+  .snack .board-item-content{
+  line-height: 10vh;
+}
+  
+  
+}
+
+@media (max-width: 480px) {
+
+  #gutter{
+    display: none;
+  }
+  
+    #main{
+    width: 1200px;
+    overflow: x;
+  }
+  
+  
+  .board-column {
+    width: 140px;
+    margin: 0 5px;
+    padding: 0;
+  }

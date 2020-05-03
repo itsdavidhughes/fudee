@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - meal planner grid w saving</title>
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+ 
+<div id="gutter">
+
+    <div class="grid-container">
+        <div class="breakfast-label"><span>Breakfast</span></div>
+        <div class="lunch-label"><span>Lunch</span></div>
+        <div class="dinner-label"><span>Dinner</span></div>
+        <div class="snacks-label"><span>Snacks</span></div>
+      </div>
+
+  
+</div>
+<div id="main">
+
+
+    <div class="board">
+      <div class="board-column">
+        <div class="board-column-header">Mon</div>
+        <div class="board-column-content-wrapper">
+          <div class="board-column-content">
+            <div class="board-item" data-id="1">
+              <div class="board-item-content meal mon-breakfast"><span>Scones</span></div>
+            </div>
+            <div class="board-item" data-id="2">
+              <div class="board-item-content meal mon-lunch"><span>Chickpea burgers</span></div>
+            </div>
+            <div class="board-item" data-id="3">
+              <div class="board-item-content meal mon-dinner"><span>Squash Risotto</span></div>
+            </div>
+            <div class="board-item snack" data-id="4">
+              <div class="board-item-content"><span>Snack #</span>1</div>
+            </div>
+            <div class="board-item snack" data-id="5">
+              <div class="board-item-content"><span>Snack #</span>2</div>
+            </div>
+            <div class="board-item snack" data-id="6">
+              <div class="board-item-content"><span>Snack #</span>3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="board-column">
+        <div class="board-column-header">Tue</div>
+        <div class="board-column-content-wrapper">
+          <div class="board-column-content">
+            <div class="board-item" data-id="7">
+              <div class="board-item-content meal tue-breakfast"><span>Eggs & Toast</span></div>
+            </div>
+            <div class="board-item" data-id="8">
+              <div class="board-item-content meal tue-lunch"><span>Tuna Pittas</span></div>
+            </div>
+            <div class="board-item" data-id="9">
+              <div class="board-item-content meal tue-dinner"><span>Cauliflower Korma</span></div>
+            </div>
+            <div class="board-item snack" data-id="10">
+              <div class="board-item-content"><span>Snack #</span>1</div>
+            </div>
+            <div class="board-item snack" data-id="11">
+              <div class="board-item-content"><span>Snack #</span>2</div>
+            </div>
+            <div class="board-item snack" data-id="12">
+              <div class="board-item-content"><span>Snack #</span>3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="board-column">
+        <div class="board-column-header">Wed</div>
+        <div class="board-column-content-wrapper">
+          <div class="board-column-content">
+            <div class="board-item" data-id="13">
+              <div class="board-item-content meal wed-breakfast"><span>Oats</span></div>
+            </div>
+            <div class="board-item" data-id="14">
+              <div class="board-item-content meal wed-lunch"><span>Chickpea Burgers</span></div>
+            </div>
+            <div class="board-item" data-id="15">
+              <div class="board-item-content meal wed-dinner"><span>Veggie Chilli</span></div>
+            </div>
+            <div class="board-item snack" data-id="16">
+              <div class="board-item-content"><span>Scones</span></div>
+            </div>
+            <div class="board-item snack" data-id="17">
+              <div class="board-item-content"><span>Snack #</span>2</div>
+            </div>
+            <div class="board-item snack" data-id="18">
+              <div class="board-item-content"><span>Snack #</span>3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="board-column">
+        <div class="board-column-header">Thu</div>
+        <div class="board-column-content-wrapper">
+          <div class="board-column-content">
+            <div class="board-item" data-id="19">
+              <div class="board-item-content meal thu-breakfast"><span>Soda Bread & Eggs</span></div>
+            </div>
+            <div class="board-item" data-id="20">
+              <div class="board-item-content meal thu-lunch"><span>Veggie Chilli</span></div>
+            </div>
+            <div class="board-item" data-id="21">
+              <div class="board-item-content meal thu-dinner"><span>Lasagne</span></div>
+            </div>
+            <div class="board-item snack" data-id="22">
+              <div class="board-item-content"><span>Snack #</span>1</div>
+            </div>
+            <div class="board-item snack" data-id="23">
+              <div class="board-item-content"><span>Snack #</span>2</div>
+            </div>
+            <div class="board-item snack" data-id="24">
+              <div class="board-item-content"><span>Snack #</span>3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="board-column">
+        <div class="board-column-header">Fri</div>
+        <div class="board-column-content-wrapper">
+          <div class="board-column-content">
+            <div class="board-item" data-id="25">
+              <div class="board-item-content meal fri-breakfast"><span>Eggs & Toast</span></div>
+            </div>
+            <div class="board-item" data-id="26">
+              <div class="board-item-content meal fri-lunch"><span>Lasagne</span></div>
+            </div>
+            <div class="board-item" data-id="27">
+              <div class="board-item-content meal fri-dinner"><span>Pizza</span></div>
+            </div>
+            <div class="board-item snack" data-id="28">
+              <div class="board-item-content"><span>Snack #</span>1</div>
+            </div>
+            <div class="board-item snack" data-id="29">
+              <div class="board-item-content"><span>Snack #</span>2</div>
+            </div>
+            <div class="board-item snack" data-id="30">
+              <div class="board-item-content"><span>Snack #</span>3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="board-column">
+        <div class="board-column-header">Sat</div>
+        <div class="board-column-content-wrapper">
+          <div class="board-column-content">
+            <div class="board-item" data-id="31">
+              <div class="board-item-content  meal sat-breakfast"><span>Mini Fry</span></div>
+            </div>
+            <div class="board-item" data-id="32">
+              <div class="board-item-content  meal sat-lunch"><span>Chicken Pittas</span></div>
+            </div>
+            <div class="board-item" data-id="33">
+              <div class="board-item-content  meal sat-dinner"><span>Tacos</span></div>
+            </div>
+            <div class="board-item snack" data-id="34">
+              <div class="board-item-content"><span>Snack #</span>1</div>
+            </div>
+            <div class="board-item snack" data-id="35">
+              <div class="board-item-content"><span>Snack #</span>2</div>
+            </div>
+            <div class="board-item snack" data-id="36">
+              <div class="board-item-content"><span>Snack #</span>3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="board-column">
+        <div class="board-column-header">Sun</div>
+        <div class="board-column-content-wrapper">
+          <div class="board-column-content">
+            <div class="board-item" data-id="37">
+              <div class="board-item-content meal sun-breakfast"><span>Waffles & Eggs</span></div>
+            </div>
+            <div class="board-item" data-id="38">
+              <div class="board-item-content meal sun-lunch"><span>Lasagene</span></div>
+            </div>
+            <div class="board-item" data-id="39">
+              <div class="board-item-content meal sun-dinner"><span>Texan Chilli</span></div>
+            </div>
+            <div class="board-item snack" data-id="40">
+              <div class="board-item-content"><span>Snack #</span>1</div>
+            </div>
+            <div class="board-item snack" data-id="41">
+              <div class="board-item-content"><span>Snack #</span>2</div>
+            </div>
+            <div class="board-item snack" data-id="42">
+              <div class="board-item-content"><span>Snack #</span>3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.1/web-animations.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js'></script>
+<script src='https://unpkg.com/muuri@0.6.3/dist/muuri.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
